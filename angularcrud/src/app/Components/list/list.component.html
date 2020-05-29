@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Name and Description</h4>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let table of tables">
+                    <td>{{table._id}}</td>
+                    <td>{{table.name}}</td>
+                    <td>{{table.description}}</td>
+                    <td class="btn btn-danger" (click)="doDelete(table)">Delete</td>
+                    <td class="btn btn-primary" (click)="doUpdate(table)">Edit</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
